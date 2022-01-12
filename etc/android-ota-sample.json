@@ -1,0 +1,113 @@
+{
+  "Port": 9000,
+  "Debug": true,
+  "ServerCertFile": "./certs/sample-server.pem",
+  "ServerKeyFile": "./certs/sample-server.key",
+  "ServerLogFile": "",
+  "SignersDir": "./signers",
+
+  "Handlers": {
+    "apk": {
+      "sailfish-dev-releasekey": {
+        "AuthorizedKeys": [],
+        "Config": {
+          "SigningCerts": [
+            { "CertPath": "./certs/releasekey.x509.pem",
+              "KeyPath": "./certs/private/releasekey.key",
+              "Type": "RSA",
+              "Hash": "SHA256"
+            }
+          ]
+        }
+      },
+      "sailfish-dev-default": {
+        "AuthorizedKeys": [],
+        "Config": {
+          "SigningCerts": [
+            { "CertPath": "./certs/default.x509.pem",
+              "KeyPath": "./certs/private/default.key",
+              "Type": "RSA",
+              "Hash": "SHA256"
+            }
+          ]
+        }
+      },
+      "sailfish-dev-media": {
+        "AuthorizedKeys": [],
+        "Config": {
+          "SigningCerts": [
+            { "CertPath": "./certs/media.x509.pem",
+              "KeyPath": "./certs/private/media.key",
+              "Type": "RSA",
+              "Hash": "SHA256"
+            }
+          ]
+        }
+      },
+      "sailfish-dev-shared": {
+        "AuthorizedKeys": [],
+        "Config": {
+          "SigningCerts": [
+            { "CertPath": "./certs/shared.x509.pem",
+              "KeyPath": "./certs/private/shared.key",
+              "Type": "RSA",
+              "Hash": "SHA256"
+            }
+          ]
+        }
+      },
+      "sailfish-dev-platform": {
+        "AuthorizedKeys": [],
+        "Config": {
+          "SigningCerts": [
+            { "CertPath": "./certs/platform.x509.pem",
+              "KeyPath": "./certs/private/platform.key",
+              "Type": "RSA",
+              "Hash": "SHA256"
+            }
+          ]
+        }
+      }
+    },
+
+    "android_boot": {
+      "sailfish-dev-boot": {
+        "AuthorizedKeys": [],
+        "Config": {
+          "SigningCert": {
+            "CertPath": "./certs/verity.x509.pem",
+            "KeyPath": "./certs/private/verity.key",
+            "Type": "RSA",
+            "Hash": "SHA256"
+          }
+        }
+      }
+    },
+
+    "android_verity": {
+      "sailfish-dev-verity": {
+        "AuthorizedKeys": [],
+        "Config": {
+          "SigningKey": {
+            "KeyPath": "./certs/private/verity.key",
+            "Type": "RSA",
+            "Hash": "SHA256"
+          }
+        }
+      }
+    },
+
+    "android_payload": {
+      "sailfish-dev-payload": {
+        "AuthorizedKeys": [],
+        "Config": {
+          "SigningKey": {
+            "KeyPath": "./certs/private/releasekey.key",
+            "Type": "RSA",
+            "Hash": "SHA256"
+          }
+        }
+      }
+    }
+  }
+}

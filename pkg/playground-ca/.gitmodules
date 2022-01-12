@@ -1,0 +1,3 @@
+[submodule "src/vendor/github.com/Azure/go-pkcs12"]
+	path = vendor/github.com/Azure/go-pkcs12
+	url = https://github.com/morrildl/go-pkcs12

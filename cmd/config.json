@@ -1,0 +1,197 @@
+{
+  "Port": 9000,
+  "ServerCertFile": "C:/Users/wangyangyang/Desktop/SignSystem/cmd/server.pem",
+  "ServerKeyFile": "C:/Users/wangyangyang/Desktop/SignSystem/cmd/server-key.pem",
+  "ServerLogFile": "C:/Users/wangyangyang/Desktop/SignSystem/cmd/server.log",
+  "SignersDir": "C:/Users/wangyangyang/Desktop/SignSystem/cmd/signers",
+  "Handlers": {
+    "apk": {
+      "playstore-app": {
+        "AuthorizedKeys": ["23:36:6A:0C:9D:90:E8:BE:86:77:CA:1C:82:C6:4B:6F:91:58:4E:70:C2:73:12:BA:30:9A:21:33:86:4E:33:96"],
+        "Config": {
+          "SigningCerts": [
+            { "CertPath": "C:/Users/wangyangyang/Desktop/SignSystem/client/client.pem",
+              "KeyPath": "C:/Users/wangyangyang/Desktop/SignSystem/client/client-key.pem",
+              "Type": "RSA",
+              "Hash": "SHA256"
+            }
+          ]
+        }
+      },
+
+      "model-dev-media": {
+        "AuthorizedKeys": [],
+        "Config": {
+          "SigningCerts": [
+            { "CertPath": "/opt/private/signing-keys/model/media-dev.crt",
+              "KeyPath": "/opt/private/signing-keys/model/media-dev.key",
+              "Type": "RSA",
+              "Hash": "SHA256"
+            }
+          ]
+        }
+      },
+      "model-prod-media": {
+        "AuthorizedKeys": ["00:11:22:33:44:55:66:77:88:99:00:aa:bb:cc:dd:ee:ff:00:11:22:33:44:55:66:77:88:99:00:aa:bb:cc:dd:ee:ff"],
+        "Config": {
+          "SigningCerts": [
+            { "CertPath": "/opt/private/signing-keys/model/media-prod.crt",
+              "KeyPath": "/opt/private/signing-keys/model/media-prod.key",
+              "Type": "RSA",
+              "Hash": "SHA256"
+            }
+          ]
+        }
+      },
+
+
+      "model-dev-platform": {
+        "AuthorizedKeys": [],
+        "Config": {
+          "SigningCerts": [
+            { "CertPath": "/opt/private/signing-keys/model/platform-dev.crt",
+              "KeyPath": "/opt/private/signing-keys/model/platform-dev.key",
+              "Type": "RSA",
+              "Hash": "SHA256"
+            }
+          ]
+        }
+      },
+      "model-prod-platform": {
+        "AuthorizedKeys": ["00:11:22:33:44:55:66:77:88:99:00:aa:bb:cc:dd:ee:ff:00:11:22:33:44:55:66:77:88:99:00:aa:bb:cc:dd:ee:ff"],
+        "Config": {
+          "SigningCerts": [
+            { "CertPath": "/opt/private/signing-keys/model/platform-prod.crt",
+              "KeyPath": "/opt/private/signing-keys/model/platform-prod.key",
+              "Type": "RSA",
+              "Hash": "SHA256"
+            }
+          ]
+        }
+      },
+
+
+      "model-dev-shared": {
+        "AuthorizedKeys": [],
+        "Config": {
+          "SigningCerts": [
+            { "CertPath": "/opt/private/signing-keys/model/shared-dev.crt",
+              "KeyPath": "/opt/private/signing-keys/model/shared-dev.key",
+              "Type": "RSA",
+              "Hash": "SHA256"
+            }
+          ]
+        }
+      },
+      "model-prod-shared": {
+        "AuthorizedKeys": ["00:11:22:33:44:55:66:77:88:99:00:aa:bb:cc:dd:ee:ff:00:11:22:33:44:55:66:77:88:99:00:aa:bb:cc:dd:ee:ff"],
+        "Config": {
+          "SigningCerts": [
+            { "CertPath": "/opt/private/signing-keys/model/shared-prod.crt",
+              "KeyPath": "/opt/private/signing-keys/model/shared-prod.key",
+              "Type": "RSA",
+              "Hash": "SHA256"
+            }
+          ]
+        }
+      },
+
+
+      "model-dev-releasekey": {
+        "AuthorizedKeys": [],
+        "Config": {
+          "SigningCerts": [
+            { "CertPath": "/opt/private/signing-keys/model/releasekey-dev.crt",
+              "KeyPath": "/opt/private/signing-keys/model/releasekey-dev.key",
+              "Type": "RSA",
+              "Hash": "SHA256"
+            }
+          ]
+        }
+      },
+      "model-prod-releasekey": {
+        "AuthorizedKeys": ["00:11:22:33:44:55:66:77:88:99:00:aa:bb:cc:dd:ee:ff:00:11:22:33:44:55:66:77:88:99:00:aa:bb:cc:dd:ee:ff"],
+        "Config": {
+          "SigningCerts": [
+            { "CertPath": "/opt/private/signing-keys/model/releasekey-prod.crt",
+              "KeyPath": "/opt/private/signing-keys/model/releasekey-prod.key",
+              "Type": "RSA",
+              "Hash": "SHA256"
+            }
+          ]
+        }
+      }
+    },
+
+    "android_boot": {
+      "model-dev-boot": {
+        "AuthorizedKeys": [],
+        "Config": {
+          "SigningCert": {
+            "CertPath": "/opt/private/signing-keys/model/releasekey-dev.crt",
+            "KeyPath": "/opt/private/signing-keys/model/releasekey-dev.key",
+            "Type": "RSA",
+            "Hash": "SHA256"
+          }
+        }
+      },
+      "model-prod-boot": {
+        "AuthorizedKeys": ["00:11:22:33:44:55:66:77:88:99:00:aa:bb:cc:dd:ee:ff:00:11:22:33:44:55:66:77:88:99:00:aa:bb:cc:dd:ee:ff"],
+        "Config": {
+          "SigningCert": {
+            "CertPath": "/opt/private/signing-keys/model/releasekey-prod.crt",
+            "KeyPath": "/opt/private/signing-keys/model/releasekey-prod.key",
+            "Type": "RSA",
+            "Hash": "SHA256"
+          }
+        }
+      }
+    },
+
+    "android_verity": {
+      "model-dev-verity": {
+        "AuthorizedKeys": [],
+        "Config": {
+          "SigningKey": {
+            "KeyPath": "/opt/private/signing-keys/model/releasekey-dev.key",
+            "Type": "RSA",
+            "Hash": "SHA256"
+          }
+        }
+      },
+      "model-prod-verity": {
+        "AuthorizedKeys": ["00:11:22:33:44:55:66:77:88:99:00:aa:bb:cc:dd:ee:ff:00:11:22:33:44:55:66:77:88:99:00:aa:bb:cc:dd:ee:ff"],
+        "Config": {
+          "SigningKey": {
+            "KeyPath": "/opt/private/signing-keys/model/releasekey-prod.key",
+            "Type": "RSA",
+            "Hash": "SHA256"
+          }
+        }
+      }
+    },
+
+    "android_payload": {
+      "model-dev-payload": {
+        "AuthorizedKeys": [],
+        "Config": {
+          "SigningKey": {
+            "KeyPath": "/opt/private/signing-keys/model/releasekey-prod.key",
+            "Type": "RSA",
+            "Hash": "SHA256"
+          }
+        }
+      },
+      "model-prod-payload": {
+        "AuthorizedKeys": ["00:11:22:33:44:55:66:77:88:99:00:aa:bb:cc:dd:ee:ff:00:11:22:33:44:55:66:77:88:99:00:aa:bb:cc:dd:ee:ff"],
+        "Config": {
+          "SigningKey": {
+            "KeyPath": "/opt/private/signing-keys/model/releasekey-prod.key",
+            "Type": "RSA",
+            "Hash": "SHA256"
+          }
+        }
+      }
+    }
+  }
+}
